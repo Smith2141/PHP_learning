@@ -12,7 +12,7 @@ $user = [
 ];
 
 foreach ($user as $key => $value) {
-    print("$key: ");
-    print("$value<br>");
+    print("$key: $value<br>");
+    //print("$value<br>");
 }
 ?>
