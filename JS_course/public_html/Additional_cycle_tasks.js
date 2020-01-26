@@ -1,23 +1,12 @@
-function testCycle(n) {
-    var result = "";
-    var s = 0;
-    var itr = 0;
-    function square(i) {
-        if (i == 0) {
-            [s, itr] = [itr,s]
-            itr = 0;
-            return s;
-        } else {
-            itr += 2 * i - 1;
-            return square(--i);
-        }
+function testCycle(a, b) {
+    if (a < b) {
+        [a, b] = [b, a];
     }
-    
-    for (let j=1; j<=n-1; ++j) {
-        result += square(j) + " ";
+    while (a % b != 0 && b > 0) {
+        [a, b] = [b, a%b];
     }
-    result+=square(n)
-    return result;
+    return b;
 }
 
-document.write(testCycle(8));
+
+document.write(testCycle(10, 15));
