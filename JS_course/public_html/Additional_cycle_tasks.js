@@ -1,12 +1,15 @@
-function testCycle(a, b) {
-    if (a < b) {
-        [a, b] = [b, a];
+function testCycle(n) {
+    var x = 'Простое число';
+    var i = 2;
+    var j = 0;
+    while (i*i <= n && j !== 1) {
+        if (n % i === 0) {
+            j = 1;
+        }
+        i += 1;
     }
-    while (a % b != 0 && b > 0) {
-        [a, b] = [b, a%b];
-    }
-    return b;
+    if (j === 1) x = 'Составное число';
+    return x;
 }
 
-
-document.write(testCycle(10, 15));
+document.write(testCycle(151));
