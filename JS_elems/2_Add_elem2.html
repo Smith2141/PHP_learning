@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create HTML element 2</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var newDiv = document.createElement('div');
+      newDiv.innerHTML = '<h2>Заголовок</h2><p>Lorem ipsum dolor sit amet.</p>';
+      newDiv.className = 'container';
+      var script = document.getElementsByTagName('script')[0];
+      document.body.insertBefore(newDiv, script);
+      // Удаление элемента
+      var elem = document.getElementsByTagName('p')[0];
+      elem.parentNode.removeChild(elem);
+      //Поменять элементы местами
+      // var first = document.getElementsByTagName('h2')[0];
+      // var second = document.getElementsByTagName('p')[0];
+      second.after.(first);
+    </script>
+  </body>
+</html>
