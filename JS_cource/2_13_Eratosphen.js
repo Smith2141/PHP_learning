@@ -1,11 +1,22 @@
 function testCycle(n) {
-  var result = 2 + ' ';
-  let i = 3;
-  for (i; i <= n; i++) {
-    if (i!==2 && i%2!==0 && i%3!==0 && i%5!==0 && i%7!==0 && i%7!==0)
-      result += i + ' ';
+  var result = ' ';
+  let i = 2;
+  for (; i < n; i++) {
+    if (i!==2 && i%2==0){
+      continue;
     }
-    return result;
+    else if (i!==3 && i%3==0){
+      continue;
+    }
+    else if (i!==5 && i%5==0){
+      continue;
+    }
+    else if (i!==7 && i%7==0){
+      continue;
+    }
+    result += i + ' ';
   }
+  return result;
+}
 
-document.write(testCycle(27));
+document.write(testCycle(30));
