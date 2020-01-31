@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Калькулятор</title>
+    <style>
+        .Table {
+            border: 3px inset gray;
+            background: #E6E6FA;
+            margin-left: 22%;
+            margin-top: 12px;
+            width: 270px;
+            text-align: center;
+        }
+        .Table input {
+            border: 2px solid gray;
+            border-radius: 4px;
+            width: 30px;
+            margin: 4px;
+        }
+        .TextEdit {
+            width: 255px;
+            height: 23px;
+        }
+        .WideBtn {
+            width: 93px;
+        }
+    </style>
+</head>
+<body>
+    <form name="Calculation" action="">
+        <table class="Table" cellpadding="2" cellspacing="2">
+        <tr>
+            <td colspan=5 align=center>
+                <input id="TextEdit" name="ReadOut" type="Text" size=28 value="0" width="250px">
+            </td>
+        </tr>
+        <tr>
+            <td><input name="btnClear" type="Button" value="C" onclick="Clear()" /></td>
+            <td><input name="btnDel" type="Button" value="Del" onclick="Clear_one()" /></td>
+            <td><input name="btnPers" type="Button" value="%" onclick="Operations('%')" /></td>
+            <td ><input name="btnDivide" type="Button" value=" / " onclick="Operations('/')" /></td>
+            <!-- <td><input name="btnClearEntry" type="Button" value="CE" onclick="ClearEntry()" /></td> -->
+        </tr>
+        <tr>
+            <td><input name="btnSeven" type="Button" value="7" onclick="PressedNum(7)"></td>
+            <td><input name="btnEight" type="Button" value="8" onclick="PressedNum(8)"></td>
+            <td><input name="btnNine" type="Button" value="9" onclick="PressedNum(9)"></td>
+            <td><input name="btnMultiply" type="Button" value="*" onclick="Operations('*')" /></td>
+        </tr>
+        <tr>
+            <td><input name="btnFour" type="Button" value="4" onclick="PressedNum(4)"></td>
+            <td><input name="btnFive" type="Button" value="5" onclick="PressedNum(5)"></td>
+            <td><input name="btnSix" type="Button" value="6" onclick="PressedNum(6)"></td>
+            <td><input name="btnMinus" type="Button" value="-" onclick="Operations('-')" /></td>
+        </tr>
+        <tr>
+            <td><input name="btnOne" type="Button" value="1" onclick="PressedNum(1)"></td>
+            <td><input name="btnTwo" type="Button" value="2" onclick="PressedNum(2)"></td>
+            <td><input name="btnThree" type="Button" value="3" onclick="PressedNum(3)"></td>
+            <td><input name="btnPlus" type="Button" value="+" onclick="Operations('+')" /></td>
+        </tr>
+        <tr>
+            <td><input name="btnZero" type="Button" value="0" onclick="PressedNum(0)"></td>
+            <td><input name="btnComma" type="Button" value="." onclick="PressedComma('.')"></td>
+            <td colspan="3"><input id="WideBtn" name="btnEquals" type="Button" value="=" onclick="Operations('=')"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        </table>
+   </form>
+</body>
+</html>
