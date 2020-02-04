@@ -25,26 +25,31 @@ else if(event.which) keycode = event.which; // all browsers
 		}
 }
 
-var b = 0; 
+var b = 0;
 var k = '';
-var znak = false; 
+var znak = false;
+var displ = '';
 
 function clear1() { // функция обнуления значений калькулятора
-	document.getElementById("window_calc").innerHTML = 0;
-	b = 0; 
+	document.getElementById("window_calc").innerHTML = 'ожидание...';
+	b = 0;
 	k = '';
 	znak = false;
+	displ = '';
 }
 
 function semn(semn) {// функция обработки операции
 	k = semn;
 	znak = false;
+	// znak = true;
 	b = parseInt(window_calc.innerHTML);
+	displ += b + k;
+	document.getElementById("window_calc").innerHTML = displ;
 }
 
 function ravno() {// функция вывода результата
 
-if(k!=''){		
+if(k!=''){
 	switch(k){
 		case '/': b = b / parseInt(window_calc.innerHTML);break;
 		case '*': b = b * parseInt(window_calc.innerHTML);break;
@@ -52,22 +57,23 @@ if(k!=''){
 		case '+': b = b + parseInt(window_calc.innerHTML);break;
 	}
 	window_calc.innerHTML = b;
-	k = ''; 
+	displ = '';
+	k = '';
 }
 }
 
 function clic(number) {// функция запоминания веденых значений
-	
+
 	var window_calc = document.getElementById("window_calc");
 
 if(window_calc.innerHTML.length < 22){
 
 if(window_calc.innerHTML != 0 && znak == true )
 	window_calc.innerHTML += number;
-else	
+else
 	window_calc.innerHTML = number;
 
-znak = true; 
+znak = true;
 }
- 
+
 }
