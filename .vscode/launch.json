@@ -9,7 +9,11 @@
             "request": "launch",
             "reAttach": true,
             "name": "Launch index.html",
+<<<<<<< HEAD
             "file": "${workspaceFolder}/JS_cource/index.html"
+=======
+            "file": "${workspaceFolder}/JS_PassForm/index.html"
+>>>>>>> 5443c581ec8b2f7e77c795f1ff5f633d7eb19071
         }
         // {
         //     "type": "firefox",
