@@ -9,7 +9,7 @@
             "request": "launch",
             "reAttach": true,
             "name": "Launch index.html",
-            "file": "${workspaceFolder}/JS_calculator/index.html"
+            "file": "${workspaceFolder}/JS_cource/index.html"
         }
         // {
         //     "type": "firefox",
