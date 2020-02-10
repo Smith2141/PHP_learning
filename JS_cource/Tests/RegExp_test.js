@@ -5,3 +5,7 @@ function RE_t(a) {
 }
 
 console.log(RE_t("This is just test string"));
+
+
+//String methods:
+//search, replace, match
