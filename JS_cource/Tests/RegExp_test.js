@@ -1,10 +1,16 @@
-var myPattern = /is/g;
-function RE_t(a) {
-    return a.replace(myPattern);
-    // return myPattern.test(a);
-}
+var myString = "This is just a test text";  // Задаем строку для поиска
+var myPattern = /te|is/g;                   // Задаем шаблон - либо "te" либо "is"
 
-console.log(RE_t("This is just test string"));
+result = myPattern.exec(myString);          
+console.log(result);
+result = myPattern.exec(myString);          
+console.log(result);
+result = myPattern.exec(myString);          
+console.log(result);
+result = myPattern.exec(myString);          
+console.log(result);
+
+
 
 
 //String methods:
